@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Logs Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Email Logs Dashboard</h1>
+    <p>Total Emails Sent: <%= totalEmails %></p>
+    <p>Total Emails Sent in the Last Hour: <%= hourlyEmails %></p>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>To</th>
+                <th>From</th>
+                <th>Subject</th>
+                <th>Content</th>
+                <th>Status</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% logs.forEach(log => { %>
+                <tr>
+                    <td><%= log.to %></td>
+                    <td><%= log.from %></td>
+                    <td><%= log.subject %></td>
+                    <td><%= log.content %></td>
+                    <td><%= log.status %></td>
+                    <td><%= log.timestamp %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
