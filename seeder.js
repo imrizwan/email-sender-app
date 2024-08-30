@@ -23,7 +23,7 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 
   // Path to the emailList.json file
-  const emailListPath = path.join(__dirname, 'data/australian.json');
+  const emailListPath = path.join(__dirname, 'data/extracted_data1.json');
 
   // Read JSON file
   fs.readFile(emailListPath, 'utf8', async (err, data) => {
