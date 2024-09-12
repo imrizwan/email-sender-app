@@ -43,7 +43,7 @@ async function sendEmails() {
       }
 
       const from = '"Ezaan Tech Services" <hello@services.ezaan.tech>';
-      const subject = "Transform Your Business with Professional Website Design & Digital Solutions – 50% Off!";
+      const subject = "Boost Your Real Estate Business with Ezaan Tech – 50% Off!";
       const mailOptions = {
         from,
         to,
